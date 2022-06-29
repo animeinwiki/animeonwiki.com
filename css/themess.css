@@ -7,137 +7,6 @@ Author:Templateify
 Paid By:https://www.animeonwiki.com
 ----------------------------------------------- */
 
-/*
-<!-- Variable definitions -->
-<Variable name="keycolor" description="Main Color" type="color" default="$(main.color)" value="#4285F4"/>
-<Group description="Theme Options" selector="body">
-    <Variable name="darkmode" description="Native Dark Mode" type="length" default="0px" min="0px" max="1px" value="0px"/>
-    <Variable name="userdarkmode" description="User Dark Mode" type="length" default="1px" min="0px" max="1px" value="1px"/>
-    <Variable name="sidebar" description="Left Sidebar" type="length" default="0px" min="0px" max="1px" value="0px"/>
-    <Variable name="fixedmenu" description="Fixed Menu" type="length" default="1px" min="0px" max="1px" value="1px"/>
-    <Variable name="fixedsidebar" description="Fixed Sidebar" type="length" default="1px" min="0px" max="1px" value="1px"/>
-</Group>
-<Group description="Theme Widths" selector="body">
-    <Variable name="boxed" description="Boxed Layout" type="length" default="0px" min="0px" max="1px" value="0px"/>
-    <Variable name="row.width" description="Container Width" type="length" default="970px" min="970px" max="1084px" value="970px"/>
-    <Variable name="sidebar.width" description="Sidebar Width" type="length" default="300px" min="250px" max="336px" value="300px"/>
-</Group>
-<Group description="Theme Fonts" selector="body">
-    <Variable name="main.font" description="Site Font" type="font" family="Work Sans" default="normal 400 14px $(family)"  value="normal 400 14px $(family)"/>
-    <Variable name="title.font" description="Title Font" type="font" family="Work Sans" default="normal 400 14px $(family)"  value="normal 400 14px $(family)"/>
-    <Variable name="meta.font" description="Meta Font" type="font" family="Work Sans" default="normal 400 14px $(family)"  value="normal 400 14px $(family)"/>
-    <Variable name="text.font" description="Text Font" type="font" family="Work Sans" default="normal 400 14px $(family)"  value="normal 400 14px $(family)"/>
-</Group>
-<Group description="Background" selector="body">
-    <Variable name="body.background" description="Background" type="background" color="$(body.background.color)" default="$(color) none repeat scroll top left" value="$(color) none repeat scroll top left"/>
-    <Variable name="body.background.color" description="Body Background" type="color" default="#F4F5FA"  value="#F4F5FA"/>
-    <Variable name="outer.bg" description="Outer Wrapper Background" type="color" default="#F8F9FA"  value="#F8F9FA"/>
-    <Variable name="background.cover" description="Background Image Size Cover" type="length" default="0px" min="0px" max="1px" value="0px"/>
-</Group>
-<Group description="Theme Colors" selector="body">
-    <Variable name="main.color" description="Theme Color" type="color" default="#4285F4" value="#4285F4"/>
-    <Variable name="title.color" description="Title Color" type="color" default="#344955" value="#344955"/>
-    <Variable name="title.hover.color" description="Title Hover Color" type="color" default="$(main.color)" value="#4285F4"/>
-    <Variable name="meta.color" description="Meta Color" type="color" default="#919CA2" value="#919CA2"/>
-    <Variable name="text.color" description="Text Color" type="color" default="#5B696F"  value="#5B696F"/>
-</Group>
-<Group description="Site Header" selector="header#header-wrapper">
-    <Variable name="header.bg" description="Header Background" type="color" default="#344955" value="#344955"/>
-    <Variable name="header.color" description="Header Color" type="color" default="#F6F7F8" value="#F6F7F8"/>
-    <Variable name="header.hover.color" description="Header Hover Color" type="color" default="$(main.color)" value="#4285F4"/>
-</Group>
-<Group description="Sub Menu" selector="header#header-wrapper">
-    <Variable name="submenu.bg" description="Sub Menu Background" type="color" default="#FFFFFF" value="#FFFFFF"/>
-    <Variable name="submenu.color" description="Sub Menu Color" type="color" default="$(title.color)" value="#344955"/>
-    <Variable name="submenu.hover.color" description="Sub Menu Hover Color" type="color" default="$(main.color)" value="#4285F4"/>
-</Group>
-<Group description="Mega Menu" selector="header#header-wrapper">
-    <Variable name="megamenu.bg" description="Mega Menu Background" type="color" default="#FFFFFF" value="#FFFFFF"/>
-    <Variable name="megamenu.color" description="Mega Menu Color" type="color" default="$(post.title.color)" value="#344955"/>
-    <Variable name="megamenu.hover.color" description="MegaMenu Hover Color" type="color" default="$(main.color)" value="#4285F4"/>
-</Group>
-<Group description="Mobile Menu">
-    <Variable name="mmenu.bg" description="Mobile Menu Background" type="color" default="#FFFFFF" value="#FFFFFF"/>
-    <Variable name="mmenu.color" description="Mobile Menu Color" type="color" default="$(title.color)" value="#344955"/>
-    <Variable name="mmenu.hover.color" description="Mobile Menu Hover Color" type="color" default="$(main.color)" value="#4285F4"/>
-</Group>
-<Group description="Header ADS" selector="#header-ads-wrap">
-    <Variable name="headerad.onpost" description="Show on Post Page" type="length" default="1px" min="0px" max="1px" value="1px"/>
-</Group>
-<Group description="Post Styles" select="div#main">
-    <Variable name="post.title.color" description="Post Title Color" type="color" default="$(title.color)" value="#344955"/>
-    <Variable name="post.title.hover.color" description="Post Title Hover Color" type="color" default="$(title.hover.color)" value="#4285F4"/>
-</Group>
-<Group description="Post Page Styles" select="div#main">
-    <Variable name="post.text.color" description="Post Text Color" type="color" default="$(text.color)" value="#5B696F"/>
-    <Variable name="itempost.title.size" description="Post Title Font Size" type="length" default="33px" min="20px" max="50px" value="33px"/>
-    <Variable name="itempost.content.size" description="Post Text Font Size" type="length" default="14px" min="12px" max="20px" value="14px"/>
-</Group>
-<Group description="Post Page Options" select="div#main">
-    <Variable name="breadcrumb" description="Post Breadcrumbs" type="length" default="1px" min="0px" max="1px" value="1px"/>
-    <Variable name="cmm.count" description="Comments Count" type="length" default="1px" min="0px" max="1px" value="1px"/>
-    <Variable name="postnav" description="Post Navigation" type="length" default="1px" min="0px" max="1px" value="1px"/>
-</Group>
-<Group description="Theme Widgets" select="div#sidebar">
-    <Variable name="widget.bg" description="Widget Background" type="color" default="#FFFFFF" value="#FFFFFF"/>
-    <Variable name="wtitle.color" description="Widget Title Color" type="color" default="$(title.color)" value="#344955"/>
-</Group>
-<Group description="Footer ADS" selector="#footer-ads-wrap">
-    <Variable name="footerad.onpost" description="Show on Post Page" type="length" default="1px" min="0px" max="1px" value="1px"/>
-</Group>
-<Group description="Theme Footer" selector="footer#footer-wrapper">
-    <Variable name="footer.bg" description="Footer Background" type="color" default="#344955" value="#344955"/>
-    <Variable name="footer.color" description="Footer Color" type="color" default="#F6F7F8" value="#F6F7F8"/>
-    <Variable name="footer.text.color" description="Footer Text Color" type="color" default="#B4C1CC" value="#B4C1CC"/>
-    <Variable name="footer.hover.color" description="Footer Links Hover Color" type="color" default="$(main.color)" value="#4285F4"/>
-</Group>
-<Group description="Footer Bar" selector="div.footerbar">
-    <Variable name="footerbar.bg" description="Footer Bar Background" type="color" default="#2C3E48" value="#2C3E48"/>
-    <Variable name="footerbar.color" description="Footer Bar Color" type="color" default="#F6F7F8" value="#F6F7F8"/>
-    <Variable name="footerbar.hover.color" description="Footer Bar Hover Color" type="color" default="$(main.color)" value="#4285F4"/>
-</Group>
-<Group description="Cookie Consent" selector="#cookie-ify">
-    <Variable name="cookie.bg" description="Cookie Background" type="color" default="$(footer.bg)" value="#344955"/>
-    <Variable name="cookie.color" description="Cookie Text Color" type="color" default="$(footer.text.color)" value="#B4C1CC"/>
-</Group>
-<Group description="Theme Buttons">
-    <Variable name="button.bg" description="Button Background" type="color" default="$(main.color)" value="#4285F4"/>
-    <Variable name="button.color" description="Button Color" type="color" default="#FFFFFF" value="#FFFFFF"/>
-    <Variable name="button.hover.bg" description="Button Hover Background" type="color" default="#3367D6" value="#3367D6"/>
-    <Variable name="button.hover.color" description="Button Hover Color" type="color" default="#FFFFFF" value="#FFFFFF"/>
-</Group>
-<Group description="Reset (Theme Fonts)">
-    <!-- Site Font -->
-    <Variable name="mainfont.medium" description="Main Font Medium" type="font" default="normal 500 14px $(main.font.family)" value="normal 500 14px $(family)"/>
-    <Variable name="mainfont.semibold" description="Main Font SemiBold" type="font" default="normal 600 14px $(main.font.family)" value="normal 600 14px $(family)"/>
-    <Variable name="mainfont.bold" description="Main Font Bold" type="font" default="normal 700 14px $(main.font.family)" value="normal 700 14px $(family)"/>
-    <Variable name="mainfont.italic" description="Main Font Italic" type="font" default="italic 400 14px $(main.font.family)" value="italic 400 14px $(family)"/>
-    <Variable name="mainfont.mediumitalic" description="Main Font Medium Italic" type="font" default="italic 500 14px $(main.font.family)" hideEditor="true" value="italic 500 14px $(family)"/>
-    <Variable name="mainfont.semibolditalic" description="Main Font SemiBold Italic" type="font" default="italic 600 14px $(main.font.family)" value="italic 600 14px $(family)"/>
-    <Variable name="mainfont.bolditalic" description="Main Font Bold Italic" type="font" default="italic 700 14px $(main.font.family)" value="italic 700 14px $(family)"/>
-    <!-- Title Font -->
-    <Variable name="titlefont.medium" description="Title Font Medium" type="font" default="normal 500 14px $(title.font.family)" value="normal 500 14px $(family)"/>
-    <Variable name="titlefont.semibold" description="Title Font SemiBold" type="font" default="normal 600 14px $(title.font.family)" value="normal 600 14px $(family)"/>
-    <Variable name="titlefont.bold" description="Title Font Bold" type="font" default="normal 700 14px $(title.font.family)" value="normal 700 14px $(family)"/>
-    <Variable name="titlefont.italic" description="Title Font Italic" type="font" default="italic 400 14px $(title.font.family)" value="italic 400 14px $(family)"/>
-    <Variable name="titlefont.mediumitalic" description="Title Font Medium Italic" type="font" default="italic 500 14px $(title.font.family)" value="italic 500 14px $(family)"/>
-    <Variable name="titlefont.semibolditalic" description="Title Font SemiBold Italic" type="font" default="italic 600 14px $(title.font.family)" value="italic 600 14px $(family)"/>
-    <Variable name="titlefont.bolditalic" description="Title Font Bold Italic" type="font" default="italic 700 14px $(title.font.family)" value="italic 700 14px $(family)"/>
-    <!-- Meta Font -->
-    <Variable name="metafont.italic" description="Meta Font Italic" type="font" default="italic 400 14px $(meta.font.family)" value="italic 400 14px $(family)"/>
-    <Variable name="metafont.medium" description="Meta Font Medium" type="font" default="normal 500 14px $(meta.font.family)" value="normal 500 14px $(family)"/>
-    <Variable name="metafont.mediumitalic" description="Meta Font Medium Italic" type="font" default="italic 500 14px $(meta.font.family)" value="italic 500 14px $(family)"/>
-    <!-- Text Font -->
-    <Variable name="textfont.medium" description="Text Font Medium" type="font" default="normal 500 14px $(text.font.family)" value="normal 500 14px $(family)"/>
-    <Variable name="textfont.semibold" description="Text Font SemiBold" type="font" default="normal 600 14px $(text.font.family)" value="normal 600 14px $(family)"/>
-    <Variable name="textfont.bold" description="Text Font Bold" type="font" default="normal 700 14px $(text.font.family)" value="normal 700 14px $(family)"/>
-    <Variable name="textfont.italic" description="Text Font Italic" type="font" default="italic 400 14px $(text.font.family)" value="italic 400 14px $(family)"/>
-    <Variable name="textfont.mediumitalic" description="Text Font Medium Italic" type="font" default="italic 500 14px $(text.font.family)" value="italic 500 14px $(family)"/>
-    <Variable name="textfont.semibolditalic" description="Text Font SemiBold Italic" type="font" default="italic 600 14px $(text.font.family)" value="italic 600 14px $(family)"/>
-    <Variable name="textfont.bolditalic" description="Text Font Bold Italic" type="font" default="italic 700 14px $(text.font.family)" value="italic 700 14px $(family)"/>
-</Group>
-*/
-
 /*-- Google Fonts --*/
 @font-face{font-family:'Work Sans';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/worksans/v8/QGYqz_wNahGAdqQ43Rh_eZDkv_1w4A.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}
 @font-face{font-family:'Work Sans';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/worksans/v8/QGYqz_wNahGAdqQ43Rh_eZDlv_1w4A.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -171,8 +40,8 @@ Paid By:https://www.animeonwiki.com
 @font-face{font-family:"Font Awesome 5 Free";font-display:swap;font-style:normal;font-weight:900;font-display:block;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-solid-900.eot);src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-solid-900.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-solid-900.woff) format("woff"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-solid-900.ttf) format("truetype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-solid-900.svg#fontawesome) format("svg")}
 .fa,.fas{font-family:"Font Awesome 5 Free";font-weight:900}
 /*-- CSS Variables --*/
-html{--body-font:'$(main.font.family)',Arial,sans-serif;--title-font:'$(title.font.family)',Arial,sans-serif;--meta-font:'$(meta.font.family)',Arial,sans-serif;--text-font:'$(text.font.family)',Arial,sans-serif;--body-bg-color:$(body.background.color);--body-bg:$(body.background);--outer-bg:$(outer.bg);--main-color:$(main.color);--title-color:$(title.color);--title-hover-color:$(title.hover.color);--meta-color:$(meta.color);--text-color:$(text.color);--header-bg:$(header.bg);--header-color:$(header.color);--header-hover-color:$(header.hover.color);--submenu-bg:$(submenu.bg);--submenu-color:$(submenu.color);--submenu-hover-color:$(submenu.hover.color);--megamenu-bg:$(megamenu.bg);--megamenu-color:$(megamenu.color);--megamenu-hover-color:$(megamenu.hover.color);--mobilemenu-bg:$(mmenu.bg);--mobilemenu-color:$(mmenu.color);--mobilemenu-hover-color:$(mmenu.hover.color);--widget-bg:$(widget.bg);--widget-title-color:$(wtitle.color);--widget-shadow:0 2px 6px 0 rgba(0,0,0,0.05);--post-title-color:$(post.title.color);--post-title-hover-color:$(post.title.hover.color);--post-text-color:$(post.text.color);--footer-bg:$(footer.bg);--footer-color:$(footer.color);--footer-hover-color:$(footer.hover.color);--footer-text-color:$(footer.text.color);--footerbar-bg:$(footerbar.bg);--footerbar-color:$(footerbar.color);--footerbar-hover-color:$(footerbar.hover.color);--cookie-bg:$(cookie.bg);--cookie-color:$(cookie.color);--button-bg:$(button.bg);--button-color:$(button.color);--button-hover-bg:$(button.hover.bg);--button-hover-color:$(button.hover.color);--border-color:rgba(155,155,155,0.1);--avatar-shadow:0 1px 4px rgba(0,0,0,0.05);--button-shadow:0 1px 4px rgba(0,0,0,0.05)}
-html.is-dark{--body-bg-color:#25353D;--body-bg:$(body.background);--outer-bg:#2c3e48;--main-color:$(main.color);--title-color:#f6f7f8;--title-hover-color:$(title.hover.color);--meta-color:#cfd6da;--text-color:#b4c1cc;--header-bg:#344955;--header-color:#f6f7f8;--header-hover-color:$(header.hover.color);--submenu-bg:#4a6572;--submenu-color:#f6f7f8;--submenu-hover-color:$(submenu.hover.color);--megamenu-bg:#4a6572;--megamenu-color:#f6f7f8;--megamenu-hover-color:$(megamenu.hover.color);--mobilemenu-bg:#2c3e48;--mobilemenu-color:#f6f7f8;--mobilemenu-hover-color:$(mmenu.hover.color);--widget-bg:#344955;--widget-title-color:#f6f7f8;--widget-shadow:0 2px 6px 0 rgba(0,0,0,0.05);--post-title-color:#f6f7f8;--post-title-hover-color:$(post.title.hover.color);--post-text-color:#b4c1cc;--footer-bg:#344955;--footer-color:#f6f7f8;--footer-hover-color:$(footer.hover.color);--footer-text-color:#b4c1cc;--footerbar-bg:#2c3e48;--footerbar-color:#f6f7f8;--footerbar-hover-color:$(footerbar.hover.color);--cookie-bg:#4a6572;--cookie-color:#f6f7f8;--button-bg:$(button.bg);--button-color:$(button.color);--button-hover-bg:$(button.hover.bg);--button-hover-color:$(button.hover.color);--border-color:rgba(155,155,155,0.1);--avatar-shadow:0 1px 4px rgba(0,0,0,0.05);--button-shadow:0 1px 4px rgba(0,0,0,0.05)}
+html{--body-font:'Work Sans',Arial,sans-serif;--title-font:'Work Sans',Arial,sans-serif;--meta-font:'Work Sans',Arial,sans-serif;--text-font:'Work Sans',Arial,sans-serif;--body-bg-color:#F4F5FA;--body-bg:#F4F5FA none repeat scroll top left;--outer-bg:#F8F9FA;--main-color:#4285F4;--title-color:#344955;--title-hover-color:#4285F4;--meta-color:#919CA2;--text-color:#5B696F;--header-bg:#344955;--header-color:#F6F7F8;--header-hover-color:#4285F4;--submenu-bg:#FFFFFF;--submenu-color:#344955;--submenu-hover-color:#4285F4;--megamenu-bg:#FFFFFF;--megamenu-color:#344955;--megamenu-hover-color:#4285F4;--mobilemenu-bg:#FFFFFF;--mobilemenu-color:#344955;--mobilemenu-hover-color:#4285F4;--widget-bg:#FFFFFF;--widget-title-color:#344955;--widget-shadow:0 2px 6px 0 rgba(0,0,0,0.05);--post-title-color:#344955;--post-title-hover-color:#4285F4;--post-text-color:#5B696F;--footer-bg:#344955;--footer-color:#F6F7F8;--footer-hover-color:#4285F4;--footer-text-color:#B4C1CC;--footerbar-bg:#2C3E48;--footerbar-color:#F6F7F8;--footerbar-hover-color:#4285F4;--cookie-bg:#344955;--cookie-color:#B4C1CC;--button-bg:#4285F4;--button-color:#FFFFFF;--button-hover-bg:#3367D6;--button-hover-color:#FFFFFF;--border-color:rgba(155,155,155,0.1);--avatar-shadow:0 1px 4px rgba(0,0,0,0.05);--button-shadow:0 1px 4px rgba(0,0,0,0.05)}
+html.is-dark{--body-bg-color:#25353D;--body-bg:#F4F5FA none repeat scroll top left;--outer-bg:#2c3e48;--main-color:#4285F4;--title-color:#f6f7f8;--title-hover-color:#4285F4;--meta-color:#cfd6da;--text-color:#b4c1cc;--header-bg:#344955;--header-color:#f6f7f8;--header-hover-color:#4285F4;--submenu-bg:#4a6572;--submenu-color:#f6f7f8;--submenu-hover-color:#4285F4;--megamenu-bg:#4a6572;--megamenu-color:#f6f7f8;--megamenu-hover-color:#4285F4;--mobilemenu-bg:#2c3e48;--mobilemenu-color:#f6f7f8;--mobilemenu-hover-color:#4285F4;--widget-bg:#344955;--widget-title-color:#f6f7f8;--widget-shadow:0 2px 6px 0 rgba(0,0,0,0.05);--post-title-color:#f6f7f8;--post-title-hover-color:#4285F4;--post-text-color:#b4c1cc;--footer-bg:#344955;--footer-color:#f6f7f8;--footer-hover-color:#4285F4;--footer-text-color:#b4c1cc;--footerbar-bg:#2c3e48;--footerbar-color:#f6f7f8;--footerbar-hover-color:#4285F4;--cookie-bg:#4a6572;--cookie-color:#f6f7f8;--button-bg:#4285F4;--button-color:#FFFFFF;--button-hover-bg:#3367D6;--button-hover-color:#FFFFFF;--border-color:rgba(155,155,155,0.1);--avatar-shadow:0 1px 4px rgba(0,0,0,0.05);--button-shadow:0 1px 4px rgba(0,0,0,0.05)}
 html.rtl{--body-font:'Tajawal',Arial,sans-serif;--title-font:'Tajawal',Arial,sans-serif;--meta-font:'Tajawal',Arial,sans-serif;--text-font:'Tajawal',Arial,sans-serif}
 /*-- Reset CSS --*/
 a,abbr,acronym,address,applet,b,big,blockquote,body,caption,center,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,i,iframe,img,ins,kbd,label,legend,li,object,p,pre,q,s,samp,small,span,strike,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,tt,u,ul,var{padding:0;margin:0;border:0;outline:0;vertical-align:baseline;background:0 0;text-decoration:none}
@@ -203,19 +72,19 @@ body.is-cover{background-attachment:fixed;background-size:cover;background-posit
 h1,h2,h3,h4,h5,h6{font-family:var(--title-font);font-weight:700}
 a,input,button{transition:all .0s ease}
 #outer-wrapper{position:relative;overflow:hidden;width:100%;max-width:100%;background-color:var(--outer-bg);margin:0 auto;padding:0}
-.is-boxed #outer-wrapper{width:$(row.width + 40px);max-width:100%;box-shadow:0 0 20px rgba(0,0,0,0.1)}
+.is-boxed #outer-wrapper{width:1010px;max-width:100%;box-shadow:0 0 20px rgba(0,0,0,0.1)}
 .container{position:relative}
-/*--.row-x1{width:$(row.width)}
+/*--.row-x1{width:970px}
 --*/
 .row-x1{width:60%}
 .flex-center{display:flex;justify-content:center}
 #content-wrapper{position:relative;float:left;width:100%;overflow:hidden;padding:20px 0;margin:0;border-top:0}
 .theiaStickySidebarIfy:before,.theiaStickySidebarIfy:after{content:'';display:table;clear:both}
-/*-- #main-wrapper{position:relative;float:left;width:calc(100% - $(sidebar.width + 20px));padding:0}
+/*-- #main-wrapper{position:relative;float:left;width:calc(100% - 320px);padding:0}
 --*/
 #main-wrapper{position:relative;float:left;width:calc(100% - 420px);padding:0}
 .is-left #main-wrapper,.rtl #main-wrapper{float:right}
-/*-- #sidebar-wrapper{position:relative;float:right;width:$(sidebar.width);padding:0}
+/*-- #sidebar-wrapper{position:relative;float:right;width:300px;padding:0}
 --*/
 #sidebar-wrapper{position:relative;float:right;width:400px;padding:0}
 .is-left #sidebar-wrapper,.rtl #sidebar-wrapper{float:left}
@@ -361,7 +230,7 @@ a,input,button{transition:all .0s ease}
 #header-wrapper{position:relative;float:left;width:100%;height:56px;background-color:var(--header-bg);margin:0}
 .header-inner{position:relative;float:left;width:100%;height:56px;margin:0}
 .header-header{position:relative;float:left;width:100%;height:56px;background-color:var(--header-bg);margin:0;box-shadow:0 2px 10px -3px rgba(0,0,0,0.05)}
-.is-boxed .header-header{float:none;width:$(row.width + 40px);max-width:100%;margin:0 auto;border:0}
+.is-boxed .header-header{float:none;width:1010px;max-width:100%;margin:0 auto;border:0}
 .header-items{position:relative;float:left;width:100%;display:flex;flex-wrap:wrap;justify-content:space-between;margin:0}
 .flex-left,.flex-right{position:static;display:flex;margin:0}
 .main-logo{position:relative;float:left;height:56px;overflow:hidden;margin:0 15px 0 0}
@@ -529,7 +398,7 @@ html.is-dark .darkmode-toggle:after{content:'\f185'}
 #breadcrumb a.home,#breadcrumb a:hover{color:var(--main-color)}
 #breadcrumb em:after{content:'\f054';font-family:'Font Awesome 5 Free';font-size:9px;font-weight:900;font-style:normal;vertical-align:middle;margin:0 3px}
 .rtl #breadcrumb em:after{content:'\f053'}
-.item-post h1.entry-title{position:relative;float:left;width:100%;font-size:$(itempost.title.size);font-weight:700;margin:0}
+.item-post h1.entry-title{position:relative;float:left;width:100%;font-size:33px;font-weight:700;margin:0}
 .item-post .has-meta h1.entry-title{margin-bottom:15px}
 .item-post .entry-meta{display:flex;flex-wrap:wrap;justify-content:space-between;font-size:13px;margin:0}
 .item-post .entry-meta .align-left,.item-post .entry-meta .align-right{display:flex;flex-wrap:wrap;align-items:center}
@@ -547,7 +416,7 @@ html.is-dark .darkmode-toggle:after{content:'\f185'}
 .item-post .entry-meta .entry-comments-link.show{display:block}
 .entry-content-wrap{position:relative;float:left;width:100%;margin:0}
 .entry-content-wrap .separator{margin-top:25px}
-#post-body{position:relative;float:left;width:100%;font-family:var(--text-font);font-size:$(itempost.content.size);color:var(--post-text-color);line-height:1.6em;padding:0;margin:20px 0 0}
+#post-body{position:relative;float:left;width:100%;font-family:var(--text-font);font-size:14px;color:var(--post-text-color);line-height:1.6em;padding:0;margin:20px 0 0}
 #post-body > p:nth-child(2){font-size:20px;font-weight:600;line-height:normal}
 #post-body > p{margin-top:15px;font-size:18px}
 .post-body h1,.post-body h2,.post-body h3,.post-body h4,.post-body h5,.post-body h6{font-size:17px;color:var(--title-color);margin:0 0 20px}
@@ -956,71 +825,10 @@ a.ads-here{position:relative;display:flex;align-items:center;justify-content:cen
 .sidebar a.ads-here{height:250px}
 .is-post #main a.ads-here{background-color:rgba(155,155,155,0.05);box-shadow:none}
 a.ads-here:hover{color:var(--text-color)}
-@media (max-width:$(row.width + 40px)){#outer-wrapper,.is-boxed #outer-wrapper,.is-boxed .main-nav-flex{width:100%;max-width:100%;margin:0}.row-x1{width:100%;max-width:100%}#header-wrapper .container,#header-ads-wrap > .container,#content-wrapper > .container,#footer-ads-wrap > .container,#footer-wrapper .container{padding:0 15px}#cookie-ify{bottom:15px;left:15px;padding:15px}.rtl #cookie-ify{left:unset;right:15px}}
+@media (max-width:1010px){#outer-wrapper,.is-boxed #outer-wrapper,.is-boxed .main-nav-flex{width:100%;max-width:100%;margin:0}.row-x1{width:100%;max-width:100%}#header-wrapper .container,#header-ads-wrap > .container,#content-wrapper > .container,#footer-ads-wrap > .container,#footer-wrapper .container{padding:0 15px}#cookie-ify{bottom:15px;left:15px;padding:15px}.rtl #cookie-ify{left:unset;right:15px}}
 @media (max-width:880px){#header-wrapper .container{padding:0}.mobile-menu-toggle{display:flex}.header-items{flex-wrap:nowrap}#seopro-pro-main-nav{display:none!important}#slide-menu,.overlay{display:block}.main-toggle-wrap,#main-search-wrap{padding:0 15px}.nav-active .overlay{visibility:visible;opacity:1}.nav-active #back-top{opacity:0!important}#main-wrapper,#sidebar-wrapper{width:100%}#sidebar-wrapper{margin:20px 0 0}#blog-pager{margin:20px 0 0}#seopro-pro-about-section{flex-wrap:wrap;flex-direction:column}#seopro-pro-about-section .Image{width:100%;flex-direction:column;justify-content:center;text-align:center}#seopro-pro-about-section .footer-logo,.rtl #seopro-pro-about-section .footer-logo{padding:0 0 20px}.footer-info{flex:none;text-align:center}.footer-info h3.title{display:none}#seopro-pro-about-section .LinkList{width:100%;justify-content:center;margin:15px 0 0}.seopro-pro-about-section .social-icons li,.rtl .seopro-pro-about-section .social-icons li{margin:10px 5px 0}.footerbar{height:auto;line-height:inherit;padding:25px 0;margin:0}.footerbar .container{flex-direction:column;justify-content:center}.footerbar .footer-copyright,#footer-menu{width:100%;text-align:center;margin:0}.footerbar .footer-copyright{font-size:13px;opacity:.9}#footer-menu{padding:10px 0 0}.footer-menu ul{justify-content:center}.footer-menu ul li a,.rtl .footer-menu ul li a{display:block;margin:5px 10px 0}#back-top{right:15px}.rtl #back-top{left:15px;right:unset}}
 @media (max-width:680px){.post-body table{display:block}.seopro-pro-share-links li.twitter a span{display:none}.errorWrap h3{font-size:130px}}
 @media (max-width:580px){.main-search .search-input{padding:0 13px}.index-post{flex-direction:column}.index-post .entry-image-wrap{width:100%;height:200px;margin:0 0 15px}.rtl .index-post .entry-image-wrap{margin:0 0 15px}.index-post .entry-header{flex:none;padding:0}.item-post h1.entry-title{font-size:30px}.index-post .entry-excerpt{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}.related-posts{grid-template-columns:repeat(2,1fr)}.errorWrap{padding:25px 0 45px}#cookie-ify,.rtl #cookie-ify{width:calc(100% - 30px);margin:0}}
 @media (max-width:480px){.item-post h1.entry-title{font-size:27px}.related-posts .entry-image-wrap{height:110px;margin:0 0 8px}}
 @media (max-width:380px){.index-post .entry-image-wrap{height:180px}.item-post h1.entry-title{font-size:25px}.tocify-inner{min-width:100%}.seopro-pro-share-links li.has-span a span{display:none}.related-posts .entry-image-wrap{height:100px}}
 @media (max-width:320px){.index-post .entry-title,.item-post h1.entry-title{font-size:23px}.related-posts .entry-image-wrap{height:80px}#slide-menu{width:100%}}
-]]></b:skin>
-</b:if>
-<b:if cond='data:view.isLayoutMode'>
-<b:template-skin><![CDATA[
-html,body#layout #outer-wrapper,body#layout .row{width:auto;padding:0}
-body#layout{position:relative;width:auto;max-width:100%;background-color:#f9f9f9;padding:95px 5px 0;margin:0}
-body#layout:before{content:'SeoPro - v1.4.0 [Power by - ThemeWiki]';position:absolute;top:0;left:5px;right:5px;height:95px;font-family:Roboto,sans-serif;font-size:23px;color:#0F1618;line-height:95px;text-align:center}
-body#layout div.section{display:block;background-color:#f1f1f1!important;margin:0 5px 10px!important;padding:16px 16px 18px!important;border-color:#e5e5e5}
-body#layout .no-items.section{display:block}
-body#layout .section h4{font-size:14px;color:#0F1618;text-transform:uppercase;margin:0}
-body#layout .section h4:after{text-transform:initial;color:#656565;font-weight:400}
-body#layout .add_widget a{color:#3c97ef!important}
-body#layout .widget-wrap3{overflow:hidden}
-body#layout .widget-content{width:auto;max-width:none;max-height:none;margin:0;border:1px solid #e5e5e5;border-left:0}
-body#layout .locked-widget .widget-content{border-left:1px solid #3c97ef}
-body#layout .locked-widget .widget-content:hover{border-left-color:#00b140}
-body#layout .widget .widget-content a.editlink{border-radius:2px}
-body#layout .visibility .editlink{background:#3c97ef url(https://lh3.googleusercontent.com/-K7ZrH6-BFg0/Yq7LMTomriI/AAAAAAAAF3o/1yTyPkMgEhASaLI63ujYH0nWg4LkbbZxwCNcBGAsYHQ/s18-c/mode_edit_w600_24dp.png) no-repeat center!important}
-body#layout .visibility .editlink:hover{background-color:#00b140!important}
-body#layout .draggable-widget .widget-wrap2{background:#3c97ef url(https://lh3.googleusercontent.com/-YTndQ1xltJ0/Yq7LMS2504I/AAAAAAAAF3k/Y_lybd5VyT4kSl6mdTQs8SVRLLx0u7tAACNcBGAsYHQ/s22/draggable.png) no-repeat 4px 50%!important}
-body#layout .draggable-widget .widget-wrap1:hover .widget-wrap2{background-color:#00b140!important}
-body#layout .visibility .layout-widget-state.visible{background-image:url(https://lh3.googleusercontent.com/-CLhG2drFWvA/Yq7LNLDzV7I/AAAAAAAAF3w/kBkYfIug83smwnbCX0T_EQjwNNcuVcxlQCNcBGAsYHQ/s1600/visibility_c3_600_24dp.png)!important}
-body#layout .visibility .layout-widget-state.not-visible{background-image:url(https://lh3.googleusercontent.com/-cm0woJR49ZE/Yq7LNfb_KvI/AAAAAAAAF30/FlNfeyCOKeIdQ9DpY-sisyXnKIH8JNN3ACNcBGAsYHQ/s1600/visibility_off_c3_600_24dp.png)!important;opacity:1}
-body#layout div.layout-widget-description{display:none;font-size:11px;line-height:1.2em}
-body#layout #theme-options,body#layout #main-menu .widget{display:block!important}
-body#layout div.ify-panel{background-color:#edf4ff!important;overflow:hidden!important;border-color:#cdd4ef}
-body#layout .ify-panel .widget{float:left;width:49.5%;margin-right:1%}
-body#layout .ify-panel .widget-content{border-color:#cdd4ef!important}
-body#layout .ify-panel .Image{margin-right:0}
-body#layout .ify-panel div.layout-widget-description{display:none}
-body#layout .flex-right,body#layout #nav-search-wrap{display:none}
-body#layout .flex-left{display:flex}
-body#layout .main-logo,body#layout .seopro-pro-main-nav{width:50%}
-body#layout #content-wrapper{padding:0;margin:0}
-body#layout #content-wrapper > .container{display:flex;margin:0}
-body#layout #main-wrapper{width:67%;padding:0}
-body#layout #sidebar-wrapper{width:33%;padding:0}
-body#layout #custom-ads{display:flex}
-body#layout #custom-ads .section{width:50%}
-body#layout #ify-panel > h4:after{content:' - by animeonwiki.com'}
-body#layout .section > h4:after{font-size:12px}
-body#layout #seopro-pro-about-section{overflow:hidden!important}
-body#layout #seopro-pro-about-section .widget{float:left;width:49.5%;margin-right:1%}
-body#layout #seopro-pro-about-section .LinkList{margin-right:0}
-body#layout .footerbar .container{display:flex}
-body#layout #footer-menu,body#layout #footer-copyright{width:50%}
-body#layout #main-logo > h4:after{content:' - Recommended Height (36px)'}
-body#layout #seopro-pro-main-nav > h4:after{content:' - With SubLinks and Mega Menu'}
-body#layout #featured > h4:after{content:' - by Most Recents or Labels'}
-body#layout #header-ads > h4:after{content:' - on Home Page and Post Page'}
-body#layout #main > h4:after{content:' - Default Blog Posts,AdSense In-Feed,Comments and More'}
-body#layout #seopro-pro-main-before-ad > h4:after{content:' - Before Post Content'}
-body#layout #seopro-pro-main-after-ad > h4:after{content:' - After Post Content'}
-body#layout #seopro-pro-post-fby-email > h4:after{content:' - After Related Posts on Post Page'}
-body#layout #sidebar > h4:after{content:' - on All Pages'}
-body#layout #footer-ads > h4:after{content:' - on Home Page and Post Page'}
-body#layout #seopro-pro-about-section > h4:after{content:' - Site Description and Social Media Links'}
-body#layout #footer-copyright > h4:after{content:' - Custom Credits'}
-body#layout #footer-menu > h4:after{content:' - Footer Links'}
-body#layout:after{content:'Power by - www.animeonwiki.com';display:block;font-family:Roboto,sans-serif;font-size:18px;color:#555;line-height:1;text-align:center;visibility:visible;padding:20px 0}
-body#layout #hidden-widgets{display:none!important}
