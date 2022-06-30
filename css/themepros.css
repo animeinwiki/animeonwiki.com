@@ -65,9 +65,8 @@ a,input,button{transition:all .0s ease}
 #outer-wrapper{position:relative;overflow:hidden;width:100%;max-width:100%;background-color:var(--outer-bg);margin:0 auto;padding:0}
 .is-boxed #outer-wrapper{width:1010px;max-width:100%;box-shadow:0 0 20px rgba(0,0,0,0.1)}
 .container{position:relative}
-/*--.row-x1{width:970px}
---*/
-.row-x1{width:60%}
+.row-x1{width:970px}
+/*--.row-x1{width:60%}--*/
 .flex-center{display:flex;justify-content:center}
 #content-wrapper{position:relative;float:left;width:100%;overflow:hidden;padding:20px 0;margin:0;border-top:0}
 .theiaStickySidebarIfy:before,.theiaStickySidebarIfy:after{content:'';display:table;clear:both}
